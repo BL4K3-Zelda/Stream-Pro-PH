@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple digital subscriptions and friendly renewal reminders from Stream Pro PH.">
+  <title>Stream Pro PH</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Stream Pro PH home"><span class="brand-mark">S</span><span>Stream<span>Pro</span> PH</span></a>
+      <div class="nav-links"><a href="#plans">Plans</a><a href="#how">How it works</a><a href="#dashboard">Dashboard</a></div>
+      <button class="button button-small button-dark js-start">Get started <span aria-hidden="true">→</span></button>
+    </nav>
+
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>●</span> Simple subscriptions, thoughtfully managed</div>
+        <h1>All your digital favorites.<br><em>One friendly place.</em></h1>
+        <p class="hero-lead">Choose a plan, send your details, and keep track of renewals without the usual back-and-forth.</p>
+        <div class="hero-actions"><button class="button button-primary js-browse">Browse subscriptions <span aria-hidden="true">→</span></button><a class="text-link" href="#how">See how it works <span aria-hidden="true">↓</span></a></div>
+        <div class="trust-row"><span>✓ Renewal reminders</span><span>✓ Human support</span><span>✓ Clear monthly pricing</span></div>
+      </div>
+      <div class="hero-card-wrap" aria-label="Subscription summary preview">
+        <div class="orbit orbit-one"><span>P</span><span>N</span><span>▶</span></div>
+        <div class="summary-card">
+          <div class="summary-top"><div><small>YOUR SUBSCRIPTIONS</small><strong>Everything, organized.</strong></div><span class="live-pill">● Active</span></div>
+          <div class="mini-plan"><span class="service-icon spotify">S</span><div><strong>Spotify Premium</strong><small>Renews Sep 12</small></div><b>₱99</b></div>
+          <div class="mini-plan"><span class="service-icon disney">D+</span><div><strong>Disney+ Premium</strong><small>Renews Sep 18</small></div><b>₱99</b></div>
+          <div class="mini-plan"><span class="service-icon youtube">▶</span><div><strong>YouTube Premium</strong><small>Renews Sep 24</small></div><b>₱119</b></div>
+          <div class="summary-total"><span>Monthly total</span><strong>₱317</strong></div>
+        </div>
+        <div class="reminder-card"><span class="bell">♢</span><div><small>FRIENDLY REMINDER</small><strong>Spotify renews in 3 days</strong></div><span>→</span></div>
+      </div>
+    </section>
+
+    <section class="plans-section" id="plans"><div class="shell">
+      <div class="section-heading"><div><span class="kicker">PICK YOUR FAVORITES</span><h2>Plans for every kind of downtime.</h2></div><p>Simple monthly rates per profile. No surprise charges—just your entertainment, ready when you are.</p></div>
+      <div class="plans-grid" id="plans-grid"></div>
+      <p class="terms-note">Netflix Premium requires a minimum of 2 profiles for TV access. Service eligibility and use remain subject to each provider’s terms.</p>
+    </div></section>
+
+    <section class="how shell" id="how">
+      <div class="section-heading centered"><div><span class="kicker">EASY FROM DAY ONE</span><h2>From choice to chill in three steps.</h2></div></div>
+      <div class="steps">
+        <article><span>01</span><div class="step-icon">＋</div><h3>Choose your plan</h3><p>Pick a service, number of profiles, and how many months you need.</p></article>
+        <article><span>02</span><div class="step-icon">✎</div><h3>Send your details</h3><p>Share the account contact and your preferred payment method securely.</p></article>
+        <article><span>03</span><div class="step-icon">✓</div><h3>We keep you posted</h3><p>Receive confirmation, status updates, and reminders before renewal.</p></article>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="dashboard"><div class="shell dashboard-grid">
+      <div class="dashboard-copy"><span class="kicker">YOUR PERSONAL HUB</span><h2>Know what’s active, what’s next, and what you’re spending.</h2><p>Every customer gets one clear view of their subscriptions and support requests. No searching through chat threads.</p><ul><li>See active plans and renewal dates</li><li>Request changes or support</li><li>Receive email reminders automatically</li></ul></div>
+      <div class="dashboard-mock"><div class="dash-header"><span>Good evening, Alex</span><button type="button">＋ Add plan</button></div><div class="dash-stats"><div><small>ACTIVE PLANS</small><b>3</b></div><div><small>NEXT RENEWAL</small><b>Sep 12</b></div><div><small>MONTHLY TOTAL</small><b>₱317</b></div></div><div class="dash-table-head"><b>Your subscriptions</b><span>View all</span></div><div class="dash-row"><span class="service-icon spotify">S</span><b>Spotify</b><span>Sep 12</span><i>Active</i></div><div class="dash-row"><span class="service-icon disney">D+</span><b>Disney+</b><span>Sep 18</span><i>Active</i></div></div>
+    </div></section>
+
+    <section class="order-section" id="order" hidden><div class="shell order-wrap">
+      <div class="order-intro"><span class="kicker">START YOUR ORDER</span><h2>Let’s set up your subscription.</h2><p>Review your estimate, then continue to the existing Stream Pro PH Google Form.</p></div>
+      <div class="order-form">
+        <label>Service<select id="service-select" aria-label="Service"></select></label>
+        <div class="form-row"><label>Profiles<input id="profiles-input" type="number" min="1" value="1" aria-label="Profiles"></label><label>Months<input id="months-input" type="number" min="1" max="12" value="1" aria-label="Months"></label></div>
+        <div class="order-total"><span>Estimated total</span><strong id="order-total">₱99</strong></div>
+        <div class="form-handoff"><span class="handoff-icon">✓</span><div><strong>Continue in the Stream Pro PH customer form</strong><p id="selection-summary"></p></div></div>
+        <a class="button button-primary full form-link" href="https://docs.google.com/forms/d/13QDVuzfGardEeU2gdxZHoLTqMaXnR1DCnUyeBcQIl-s/viewform" target="_blank" rel="noreferrer">Open customer form <span>→</span></a>
+        <small class="privacy">Never share your streaming password. Use your own email and official account invitations only.</small>
+      </div>
+    </div></section>
+
+    <footer><div class="shell footer-inner"><a class="brand" href="#top"><span class="brand-mark">S</span><span>Stream<span>Pro</span> PH</span></a><p>Subscriptions made simpler, one friendly reminder at a time.</p><span>© 2026 Stream Pro PH</span></div></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
